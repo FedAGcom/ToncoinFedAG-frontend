@@ -4,14 +4,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /*height: 100vh;*/
   background: #f0f0f0; /* Добавим фон для лучшей видимости */
 }
 
 #unity-container {
   position: relative;
-  width: 375px;
-  height: 800px; /* Высота для десктопных устройств */
+  width: 100vh;
+  height: 100vh;
   border: 2px solid #333; /* Добавлен контур тёмно-серого цвета */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавлена тень для лучшей видимости */
 }
