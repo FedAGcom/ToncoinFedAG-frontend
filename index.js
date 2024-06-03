@@ -36,11 +36,11 @@ window.addEventListener("load", function () {
   }
 
   var buildUrl = "Build";
-  var loaderUrl = buildUrl + "/BuildBlockchain.loader.js";
+  var loaderUrl = buildUrl + "/ToncoinFedAG-frontend.loader.js";
   var config = {
-    dataUrl: buildUrl + "/BuildBlockchain.data",
-    frameworkUrl: buildUrl + "/BuildBlockchain.framework.js",
-    codeUrl: buildUrl + "/BuildBlockchain.wasm",
+    dataUrl: buildUrl + "/ToncoinFedAG-frontend.data",
+    frameworkUrl: buildUrl + "/ToncoinFedAG-frontend.framework.js",
+    codeUrl: buildUrl + "/ToncoinFedAG-frontend.wasm",
     streamingAssetsUrl: "StreamingAssets",
     companyName: "DefaultCompany",
     productName: "C# TonConnect",
@@ -71,8 +71,7 @@ window.addEventListener("load", function () {
     createUnityInstance(canvas, config, (progress) => {
       progressBarFull.style.width = 100 * progress + "%";
     }).then((unityInstance) => {
-      //unityInstanceRef = unityInstance;
-	  window.unityInstance = unityInstance;
+      window.unityInstance = unityInstance;
 	  window.unityInstance.SendMessage("TelegramController", "SetWebAppUser", JSON.stringify(window.Telegram.WebApp.initDataUnsafe.user));
       loadingBar.style.display = "none";
     }).catch((message) => {

@@ -5,15 +5,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #f0f0f0;
+  background: #f0f0f0; /* Добавим фон для лучшей видимости */
 }
+
 #unity-container {
-  position: relative; /* Изменили с fixed на relative, чтобы был адаптивный */
-  width: 800px;
-  height: 375px;
-  border: 2px solid #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 375px;
+  height: 800px; /* Высота для десктопных устройств */
+  border: 2px solid #333; /* Добавлен контур тёмно-серого цвета */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавлена тень для лучшей видимости */
 }
+
 #unity-canvas {
   width: 100%;
   height: 100%;
@@ -27,6 +29,7 @@ body {
   transform: translate(-50%, -50%);
   display: none;
 }
+
 #unity-logo {
   width: 154px;
   height: 130px;
